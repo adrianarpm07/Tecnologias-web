@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>História - Rafael Nadal</title>
+    <meta name="description" content="A história e carreira de Rafael Nadal, desde os seus primeiros anos até se tornar uma lenda do ténis.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+        }
+
+        /* Navbar */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+
+        .nav-logo {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #ea580c;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-logo:hover {
+            opacity: 0.8;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #1a1a1a;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #ea580c;
+        }
+
+        /* Main Content */
+        main {
+            padding-top: 96px;
+            padding-bottom: 4rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #1a1a1a;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        .section-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .section h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ea580c;
+            margin-bottom: 1rem;
+        }
+
+        .section p {
+            line-height: 1.75;
+            color: rgba(26, 26, 26, 0.9);
+        }
+
+        .section img {
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .reverse {
+            direction: rtl;
+        }
+
+        .reverse > * {
+            direction: ltr;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .section-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .reverse {
+                direction: ltr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Rafael Nadal</a>
+            <div class="nav-links">
+                <a href="index.html">Início</a>
+                <a href="historia.html" class="active">História</a>
+                <a href="premios.html">Prémios</a>
+                <a href="academia.html">Academia</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <h1>A História de Rafael Nadal</h1>
+            
+            <div class="section">
+                <div class="section-grid">
+                    <div>
+                        <h2>Início da Carreira</h2>
+                        <p>
+                            Rafael Nadal Parera nasceu em 3 de junho de 1986, em Manacor, Maiorca, Espanha. 
+                            Começou a jogar ténis aos três anos de idade, treinado pelo seu tio Toni Nadal, 
+                            que se tornou seu treinador principal durante grande parte da sua carreira.
+                        </p>
+                    </div>
+                    <img src="images/historia2.jpg" 
+                         alt="Rafael Nadal jovem treinando intensamente no court de ténis">
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-grid reverse">
+                    <img src="images/historiainicial.jpg" 
+                         alt="Rafael Nadal dominando em court de saibro com forehand poderoso">
+                    <div>
+                        <h2>Ascensão ao Topo</h2>
+                        <p>
+                            Em 2005, aos 19 anos, Nadal ganhou o seu primeiro título de Roland Garros, 
+                            tornando-se o primeiro adolescente a vencer o torneio desde 1989. Este foi o 
+                            início de uma era de domínio absoluto no saibro que lhe valeria o título de 
+                            "Rei do Saibro".
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-grid">
+                    <div>
+                        <h2>Domínio em Roland Garros</h2>
+                        <p>
+                            Com 14 títulos em Roland Garros, Nadal estabeleceu um recorde histórico que 
+                            parece quase impossível de ser quebrado. O seu jogo agressivo, resistência física 
+                            extraordinária e mentalidade competitiva tornaram-no praticamente invencível 
+                            nos courts de saibro parisienses.
+                        </p>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1622163642998-1ea32b0bbc67?w=800" 
+                         alt="Rafael Nadal celebrando vitória de Grand Slam com troféu">
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Legado e Impacto</h2>
+                <p>
+                    Nadal é considerado um dos maiores tenistas de todos os tempos. Com 22 títulos 
+                    de Grand Slam, faz parte do "Big Three" do ténis masculino, juntamente com Roger 
+                    Federer e Novak Djokovic. A sua humildade, fair-play e espírito desportivo 
+                    inspiram milhões de fãs em todo o mundo.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>Características de Jogo</h2>
+                <p>
+                    O estilo de jogo de Nadal é caracterizado pelo seu poderoso forehand com top-spin, 
+                    excelente defesa, e capacidade de correr atrás de cada bola. A sua resistência 
+                    física e mental permite-lhe competir em partidas longas e intensas, muitas vezes 
+                    virando jogos que pareciam perdidos.
+                </p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
