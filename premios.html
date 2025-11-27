@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Prémios - Rafael Nadal</title>
-    <meta name="description" content="Os principais prémios e conquistas de Rafael Nadal ao longo da sua carreira.">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <meta name="description" content="Os principais prémios e conquistas de Rafael Nadal ao longo da sua carreira." />
 
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
@@ -30,7 +26,6 @@
             backdrop-filter: blur(8px);
             border-bottom: 1px solid #e5e5e5;
         }
-
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -40,7 +35,6 @@
             justify-content: space-between;
             height: 64px;
         }
-
         .nav-logo {
             font-size: 1.25rem;
             font-weight: bold;
@@ -48,16 +42,7 @@
             text-decoration: none;
             transition: color 0.3s;
         }
-
-        .nav-logo:hover {
-            opacity: 0.8;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 1.5rem;
-        }
-
+        .nav-links { display: flex; gap: 1.5rem; }
         .nav-links a {
             text-decoration: none;
             color: #1a1a1a;
@@ -65,23 +50,11 @@
             font-weight: 500;
             transition: color 0.3s;
         }
+        .nav-links a:hover, .nav-links a.active { color: #ea580c; }
 
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: #ea580c;
-        }
-
-        /* Main Content */
-        main {
-            padding-top: 96px;
-            padding-bottom: 4rem;
-        }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
+        /* Main */
+        main { padding-top: 96px; padding-bottom: 4rem; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 1rem; }
 
         h1 {
             font-size: 2.5rem;
@@ -91,21 +64,14 @@
             text-align: center;
         }
 
-        .tournament-section {
-            margin-bottom: 4rem;
-        }
-
+        .tournament-section { margin-bottom: 4rem; }
         .tournament-section h2 {
             font-size: 1.875rem;
             font-weight: bold;
             color: #ea580c;
             margin-bottom: 1rem;
         }
-
-        .tournament-section p {
-            color: rgba(26, 26, 26, 0.8);
-            margin-bottom: 1.5rem;
-        }
+        .tournament-section p { color: rgba(26, 26, 26, 0.8); margin-bottom: 1.5rem; }
 
         .court-images {
             display: grid;
@@ -113,19 +79,11 @@
             gap: 2rem;
             margin-bottom: 2rem;
         }
-
-        /* Imagens dos courts e símbolos – NÍTIDAS */
         .court-images img {
             border-radius: 0.5rem;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            height: 320px;
-            object-fit: contain;
-            background: #ffffff;
-            padding: 2rem;
-            image-rendering: -webkit-optimize-contrast;
-            image-rendering: crisp-edges;
-            transform: translateZ(0);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+            width: 100%; height: 320px; object-fit: contain;
+            background: #ffffff; padding: 2rem;
         }
 
         .victories-grid {
@@ -133,120 +91,60 @@
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 1.5rem;
         }
-
         .victory-card {
             background: #ffffff;
-            border: 1px solid rgba(234, 88, 12, 0.2);
+            border: 1px solid rgba(234,88,12,0.2);
             border-radius: 0.5rem;
             overflow: hidden;
             transition: box-shadow 0.3s;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
         }
-
-        .victory-card:hover {
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-        }
+        .victory-card:hover { box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1); }
 
         .victory-image {
             position: relative;
-            height: 220px; /* aumentei um pouco para caberem melhor */
+            height: 220px;
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            background: #ffffff; /* fundo branco em todos */
-        }
-
-        /* TODAS as imagens dos troféus agora nítidas e sem stretch */
-        .victory-image img {
-            width: auto;
-            height: auto;
-            max-width: 90%;
-            max-height: 90%;
-            object-fit: contain;
             background: #ffffff;
-            image-rendering: -webkit-optimize-contrast;
-            image-rendering: crisp-edges;
-            transform: translateZ(0);
+        }
+        .victory-image img {
+            max-width: 90%; max-height: 90%; object-fit: contain;
             opacity: 0.95;
         }
-
         .victory-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent 70%);
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.6), transparent 70%);
         }
-
         .victory-year {
             position: absolute;
-            bottom: 0.5rem;
-            left: 1rem;
+            bottom: 0.5rem; left: 1rem;
             font-size: 1.875rem;
             font-weight: bold;
             color: white;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.6);
         }
 
-        .victory-details {
-            padding: 1rem;
-        }
-
+        .victory-details { padding: 1rem; }
         .victory-label {
-            font-size: 0.75rem;
-            color: rgba(26, 26, 26, 0.6);
+            font-size: 0.75rem; color: rgba(26,26,26,0.6);
             margin-bottom: 0.25rem;
         }
-
-        .victory-opponent {
-            color: #1a1a1a;
-            font-weight: 500;
-        }
-
-        .victory-note {
-            font-size: 0.75rem;
-            color: #ea580c;
-            margin-top: 0.5rem;
-        }
-
-        /* Forçar nitidez EXTRA em QUALQUER imagem com "court", "simbol", "courts" ou "imbol" no nome */
-        img[src*="court"], img[src*="simbol"], img[src*="Courts"], img[src*="imbol"] {
-            image-rendering: -webkit-optimize-contrast !important;
-            image-rendering: crisp-edges !important;
-            transform: translateZ(0) scale(1) !important;
-        }
-
-        /* Todas as imagens dos troféus também ficam super nítidas */
-        .victory-image img {
-            image-rendering: -webkit-optimize-contrast !important;
-            image-rendering: crisp-edges !important;
-        }
+        .victory-opponent { color: #1a1a1a; font-weight: 500; }
+        .victory-note { font-size: 0.75rem; color: #ea580c; margin-top: 0.5rem; }
 
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-
-            .tournament-section h2 {
-                font-size: 1.5rem;
-            }
-
-            .victories-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .court-images img {
-                height: 260px;
-                padding: 1rem;
-            }
-
-            .victory-image {
-                height: 180px;
-            }
+            h1 { font-size: 2rem; }
+            .tournament-section h2 { font-size: 1.5rem; }
+            .victories-grid { grid-template-columns: 1fr; }
+            .court-images img { height: 260px; padding: 1rem; }
+            .victory-image { height: 180px; }
         }
     </style>
 </head>
 <body>
-    <!-- Navbar -->
     <nav>
         <div class="nav-container">
             <a href="index.html" class="nav-logo">Rafael Nadal</a>
@@ -259,19 +157,18 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
     <main>
         <div class="container">
             <h1>Prémios e Conquistas</h1>
-            
+
             <!-- Roland Garros -->
             <section class="tournament-section">
                 <h2>Roland Garros - 14 Títulos</h2>
                 <p>
                     O Court Philippe Chatrier, em Paris, é onde Nadal construiu a sua lenda como o maior 
-                    jogador de saibro de todos os tempos.
+                    jogador de Terra Batida / Saibro de todos os tempos.
                 </p>
-                
+
                 <div class="court-images">
                     <img src="images/rgcourt.jpg" alt="Court Philippe Chatrier em Roland Garros, Paris - Estádio de saibro icónico">
                     <img src="images/rgsimbol.jpg" alt="Troféu Coupe des Mousquetaires - Troféu de Roland Garros">
@@ -454,7 +351,7 @@
                 <p>
                     O Arthur Ashe Stadium em Nova York foi palco de grandes batalhas e vitórias memoráveis de Nadal.
                 </p>
-                
+
                 <div class="court-images">
                     <img src="images/uscourt.jpg" alt="Arthur Ashe Stadium - US Open em Nova York, court azul iluminado">
                     <img src="images/usimbol.jpg" alt="Troféu do US Open">
@@ -465,8 +362,7 @@
                         <div class="victory-image">
                             <img src="images/us2010.jpeg" alt="Troféu US Open 2010">
                             <div class="victory-overlay"></div>
-                            <div class="victory-year">2010</
-
+                            <div class="victory-year">2010</div>
                         </div>
                         <div class="victory-details">
                             <p class="victory-label">Final contra</p>
@@ -518,7 +414,7 @@
                 <p>
                     O Centre Court de Wimbledon, com a sua relva pristina, foi conquistado por Nadal em épicas finais.
                 </p>
-                
+
                 <div class="court-images">
                     <img src="images/wcourt.jpg" alt="Centre Court de Wimbledon - Court de relva icónico em Londres">
                     <img src="images/wsimbol.jpg" alt="Troféu de Wimbledon">
@@ -559,7 +455,7 @@
                     A Rod Laver Arena em Melbourne foi palco de triunfos emocionantes, incluindo a histórica 
                     vitória em 2022 que lhe deu o 21º Grand Slam.
                 </p>
-                
+
                 <div class="court-images">
                     <img src="images/auscourts.jpg" alt="Rod Laver Arena - Australian Open em Melbourne">
                     <img src="images/ausimbol.jpg" alt="Norman Brookes Challenge Cup - Troféu do Australian Open">
@@ -594,5 +490,35 @@
             </section>
         </div>
     </main>
+
+    <footer style="background:#1a1a1a; color:#e5e5e5; margin-top:4rem;">
+        <div class="container" style="padding:4rem 1rem 2rem;">
+            <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:3rem; max-width:1200px; margin:0 auto;">
+                <div>
+                    <a href="index.html" class="nav-logo" style="font-size:1.75rem; color:#ea580c; text-decoration:none; display:inline-block; margin-bottom:1rem;">Rafael Nadal</a>
+                    <p style="font-size:0.925rem; color:#aaaaaa; line-height:1.7; max-width:300px;">Academia de ténis de elite em Manacor, Maiorca.</p>
+                </div>
+
+                <div>
+                    <h4 style="color:#fff; font-size:1.1rem; margin-bottom:1rem; font-weight:600;">Navegação</h4>
+                    <ul style="list-style:none; font-size:0.925rem;">
+                        <li style="margin-bottom:0.65rem;"><a href="index.html" style="color:#ccc; text-decoration:none;">Início</a></li>
+                        <li style="margin-bottom:0.65rem;"><a href="historia.html" style="color:#ccc; text-decoration:none;">História</a></li>
+                        <li style="margin-bottom:0.65rem;"><a href="premios.html" style="color:#ccc; text-decoration:none;">Prémios</a></li>
+                        <li style="margin-bottom:0.65rem;"><a href="academia.html" style="color:#ccc; text-decoration:none;">Rafa Nadal Academia</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 style="color:#fff; font-size:1.1rem; margin-bottom:1rem; font-weight:600;">Contacto</h4>
+                    <p style="font-size:0.925rem; color:#aaa; line-height:1.8;">Rafa Nadal Academy by Movistar<br/>Manacor, Espanha</p>
+                </div>
+            </div>
+
+            <div style="border-top:1px solid #333; margin-top:3rem; padding-top:1.5rem; text-align:center; font-size:0.875rem; color:#777;">
+                <p>&copy; 2025 Rafael Nadal - Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
